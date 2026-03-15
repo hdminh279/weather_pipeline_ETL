@@ -10,7 +10,7 @@ The stored data can be queried using pgAdmin and visualized through Metabase das
 
 ## Architecture
 
-![Architecture Diagram](image-1.png)
+![Architecture Diagram](architecture.png)
 
 Pipeline flow:
 
