@@ -62,19 +62,26 @@ The processed data is loaded into a PostgreSQL table using SQLAlchemy and Pandas
 ```bash
 git clone https://github.com/hdminh279/weather_pipeline_ETL.git
 cd weather_pipeline_ETL
+uv sync
+```
+### 2. Install dependencies
+
+This project uses uv for dependency management.
+```bash
+uv sync
 ```
 
-### 2. Configure environment variables
+### 3. Configure environment variables
 
 Create and configure the .env file with your API key and database credentials.
 
-### 3. Start the services
+### 4. Start the services
 
 ```bash
 docker compose up -d
 ```
 
-### 4. Access the services
+### 5. Access the services
 | Service  | URL                                            |
 | -------- | ---------------------------------------------- |
 | Airflow  | [http://localhost:8081](http://localhost:8081) |
