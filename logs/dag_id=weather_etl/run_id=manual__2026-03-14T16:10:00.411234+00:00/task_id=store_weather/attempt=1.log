@@ -1,0 +1,29 @@
+[2026-03-14T16:10:01.537+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-14T16:10:01.561+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_etl.store_weather manual__2026-03-14T16:10:00.411234+00:00 [queued]>
+[2026-03-14T16:10:01.568+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_etl.store_weather manual__2026-03-14T16:10:00.411234+00:00 [queued]>
+[2026-03-14T16:10:01.568+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-03-14T16:10:01.581+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): store_weather> on 2026-03-14 16:10:00.411234+00:00
+[2026-03-14T16:10:01.590+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'weather_etl', 'store_weather', 'manual__2026-03-14T16:10:00.411234+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmp61loc5zy']
+[2026-03-14T16:10:01.592+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask store_weather
+[2026-03-14T16:10:01.594+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=385) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-14T16:10:01.595+0000] {standard_task_runner.py:72} INFO - Started process 387 to run task
+[2026-03-14T16:10:01.632+0000] {task_command.py:467} INFO - Running <TaskInstance: weather_etl.store_weather manual__2026-03-14T16:10:00.411234+00:00 [running]> on host 6502ca162335
+[2026-03-14T16:10:01.720+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='weather_etl' AIRFLOW_CTX_TASK_ID='store_weather' AIRFLOW_CTX_EXECUTION_DATE='2026-03-14T16:10:00.411234+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-14T16:10:00.411234+00:00'
+[2026-03-14T16:10:01.721+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-03-14T16:10:01.869+0000] {pipeline.py:48} INFO - Fetched data for Ha Giang successfully.
+[2026-03-14T16:10:01.974+0000] {pipeline.py:48} INFO - Fetched data for Ha Noi successfully.
+[2026-03-14T16:10:02.097+0000] {pipeline.py:48} INFO - Fetched data for Hai Phong successfully.
+[2026-03-14T16:10:02.213+0000] {pipeline.py:48} INFO - Fetched data for Vinh successfully.
+[2026-03-14T16:10:02.336+0000] {pipeline.py:48} INFO - Fetched data for Hue successfully.
+[2026-03-14T16:10:02.460+0000] {pipeline.py:48} INFO - Fetched data for Da Nang successfully.
+[2026-03-14T16:10:02.576+0000] {pipeline.py:48} INFO - Fetched data for Quy Nhon successfully.
+[2026-03-14T16:10:02.690+0000] {pipeline.py:48} INFO - Fetched data for Da Lat successfully.
+[2026-03-14T16:10:02.811+0000] {pipeline.py:48} INFO - Fetched data for Ho Chi Minh City successfully.
+[2026-03-14T16:10:02.929+0000] {pipeline.py:48} INFO - Fetched data for Can Tho successfully.
+[2026-03-14T16:10:02.945+0000] {pipeline.py:69} INFO - Push data to postgresql complete.
+[2026-03-14T16:10:02.945+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-14T16:10:02.952+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-03-14T16:10:02.952+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=weather_etl, task_id=store_weather, run_id=manual__2026-03-14T16:10:00.411234+00:00, execution_date=20260314T161000, start_date=20260314T161001, end_date=20260314T161002
+[2026-03-14T16:10:02.972+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-14T16:10:02.984+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-14T16:10:02.985+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
